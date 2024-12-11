@@ -25,7 +25,7 @@ def month_name(month_num):
 # Load Dataset
 @st.cache
 def load_data():
-    data = pd.read_csv("combined_dataset.csv", parse_dates=["DateTime"])
+    data = pd.read_csv("anysis/combined_dataset.csv", parse_dates=["DateTime"])
     data['MonthName'] = data['Month'].apply(lambda x: month_name(int(x)))  # Add MonthName column
     return data
 
